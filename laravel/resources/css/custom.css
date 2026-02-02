@@ -1,0 +1,480 @@
+          .bg-blue-600 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(236 101 35)!important;
+        }
+        .fondo-personalizado {
+            background-image: url('/storage/images/fondo-banner-pattern.jpg');
+            background-size: cover;
+            background-position: right top;
+        }
+        .fondo-celeste{
+         background: linear-gradient(to bottom, #587c98 0%, /* color sólido al inicio */ #8ba3b7 45%, /* mantener color hasta ~45% */ #ffffff 100% /* blanco al final */);
+        }
+        .huincha{
+            background:#f49c22;
+        }
+        .buscador{
+            background:#507593;
+        }
+        .bg-gray-50 {
+            background: #efefef;
+        }
+        .border-orange-400{
+            border-color: rgb(236 101 35)!important;
+        }
+        .texto-naranjo{
+            color:rgb(236 101 35) !important;
+        }
+        .texto-amarillo{
+            color:#ffce00;
+        }
+        .fondo-amarillo{
+            background:#ffce00;
+        }
+        .fondo-amarillo-header{
+            background:#fddd55;
+        }
+        .fondo-naranjo{
+            background:#ea502e;
+        }
+        .texto-naranjo2{
+            color:#ea502e;
+        }
+        .bg-footerx{
+            background:#2d587b;
+        }
+        .fondo-gris{
+            background:#efefef;
+        }
+        .fondo-menu-dashboard{
+            background:#f2cd30;
+        }
+        
+        /* Estilos mejorados para el sidebar sticky */
+        .sidebar {
+            width: 4.5rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            z-index: 40;
+            position: sticky;
+            top: 1rem;
+            align-self: flex-start;
+            max-height: calc(100vh - 2rem);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+        }
+        body.loaded .sidebar {
+            transition: all 0.3s ease;
+        }
+        .sidebar.expanded {
+            width: 16rem;
+        }
+        .sidebar-item-text {
+            opacity: 0;
+            transition: opacity 0.2s ease 0.1s;
+            white-space: nowrap;
+        }
+        .sidebar.expanded .sidebar-item-text {
+            opacity: 1;
+        }
+        .main-content {
+            transition: margin-left 0.3s ease;
+            min-height: 600px;
+        }
+        .sidebar-icon {
+            min-width: 1.75rem;
+            text-align: center;
+        }
+        .sidebar-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0.5rem 1rem;
+        }
+
+        /* Scroll suave para el sidebar */
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 2px;
+        }
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilos mejorados para el mega menú de categorías */
+        .mega-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .mega-menu.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mega-menu-container:hover .mega-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* PUENTE INVISIBLE - Solución al gap */
+        .mega-menu-container::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
+            z-index: 51;
+        }
+        
+        .mega-menu {
+            top: 100%;
+            margin-top: 10px;
+        }
+
+        .category-column {
+            min-width: 200px;
+        }
+        .category-header {
+            transition: all 0.2s ease;
+        }
+        .category-header:hover {
+            background-color: #fef3e2;
+            border-radius: 0.5rem;
+        }
+
+@media (max-width: 768px) {
+    /* CORREGIDO: Ocultar completamente el sidebar en móvil */
+    .sidebar {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    
+    /* Ocultar mega menú en móvil */
+    .mega-menu-container {
+        display: none;
+    }
+    .mobile-categories-link {
+        display: block;
+    }
+    
+    /* Ocultar el puente invisible en móvil */
+    .mega-menu-container::before {
+        display: none;
+    }
+}
+        .sidebar-preloaded-expanded .sidebar {
+            width: 16rem !important;
+        }
+        .sidebar-preloaded-expanded .main-content {
+            margin-left: 16rem !important;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 0 !important;
+            }
+        }
+        .text-blue-600 {
+            --tw-text-opacity: 1;
+            color: #1b709b;
+        }
+        .texto-menu{
+            color: #00378c;
+        }
+        #sidebar:not(.expanded) #sidebar-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Estilos para el dropdown de perfil */
+        .profile-dropdown {
+            display: none;
+        }
+        .profile-dropdown.open {
+            display: block;
+        }
+        .text-celestex {
+            color: #69ffff;
+        }
+        
+        /* Asegurar que el footer siempre esté debajo */
+        .min-h-screen {
+            position: relative;
+        }
+
+.btn-orange {
+  background-color: #ea580c; /* Tailwind orange-600 */
+  color: white;
+  border: 2px solid #ea580c;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  display: inline-block;
+}
+.btn-orange:hover {
+  background-color: #c2410c; /* orange-700 */
+  border-color: #c2410c;
+
+}
+
+.btn-outline-orange {
+  background-color: white;
+  color: #ea580c;
+  border: 2px solid #ea580c;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  display: inline-block;
+}
+.btn-outline-orange:hover {
+  background-color: #ea580c;
+  color: white;
+  
+}
+.notification-bubble {
+    animation: gentle-pulse 2s infinite;
+}
+
+@keyframes gentle-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Asegurar que el texto se trunque correctamente */
+.sidebar-item-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mejorar el espacio del sidebar cuando está expandido */
+.sidebar.expanded {
+    width: 17rem;
+}
+/* Asegurar que el texto del sidebar tenga espacio para el globo */
+.sidebar-item-text {
+    flex: 1;
+}
+        /* Estilos para el menú móvil */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100%;
+            background-color: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: left 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+        
+        /* Ocultar elementos en móviles */
+        @media (max-width: 767px) {
+            .desktop-only {
+                display: none !important;
+            }
+            
+            .mobile-menu-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            
+            .mobile-menu-content {
+                padding: 1rem;
+            }
+            
+            .mobile-menu-section {
+                margin-bottom: 1.5rem;
+            }
+            
+            .mobile-menu-section-title {
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                color: #333;
+                border-bottom: 1px solid #e5e5e5;
+                padding-bottom: 0.5rem;
+            }
+            
+            .mobile-menu-link {
+                display: block;
+                padding: 0.75rem 0;
+                color: #555;
+                border-bottom: 1px solid #f5f5f5;
+            }
+            
+            .mobile-menu-link:last-child {
+                border-bottom: none;
+            }
+            
+            .mobile-menu-link:hover {
+                color: #3b82f6;
+            }
+            
+            .mobile-user-info {
+                display: flex;
+                align-items: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid #e5e5e5;
+                margin-bottom: 1rem;
+            }
+            
+            .mobile-user-avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 1rem;
+                border: 2px solid #065f46;
+            }
+            
+            .mobile-user-details {
+                flex: 1;
+            }
+            
+            .mobile-user-name {
+                font-weight: bold;
+                color: #333;
+            }
+            
+            .mobile-user-email {
+                font-size: 0.875rem;
+                color: #666;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-only {
+                display: none !important;
+            }
+        }
+        .fondo-nuevo{
+
+            background:#ffb806;
+        }
+        .border-e9af1b { border-color: #e9af1b !important; }
+        /* Botón de volver arriba */
+#scrollToTopBtn {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollToTopBtn:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Color del botón */
+.btn-scroll-top {
+    background-color: #ffb806; /* Color del header */
+}
+.btn-scroll-top:hover {
+    background-color: #e6a500;
+}
+/* Estilos para los globos de notificación en el sidebar */
+.notification-bubble-sidebar {
+    display: none;
+    z-index: 10;
+}
+
+.sidebar:not(.expanded) .notification-bubble-sidebar {
+    display: block;
+}
+
+.sidebar:not(.expanded) .sidebar-expanded-bubble {
+    display: none !important;
+}
+
+.sidebar.expanded .notification-bubble-sidebar {
+    display: none;
+}
+
+.sidebar.expanded .sidebar-expanded-bubble {
+    display: inline-flex !important;
+}
+
+/* Asegurar que el icono tenga posición relativa para el posicionamiento absoluto del globo */
+.sidebar-icon {
+    position: relative;
+}
+
+/* Ajustar el espaciado cuando hay globos visibles */
+.sidebar:not(.expanded) .sidebar-item-text {
+    margin-left: 0;
+}
+
+/* Mejorar la visibilidad del globo en estado contraído */
+.notification-bubble-sidebar {
+    box-shadow: 0 0 0 2px #f2cd30; /* Color de fondo del sidebar */
+    animation: gentle-pulse 2s infinite;
+    border: 2px solid #f2cd30; /* Borde del mismo color del sidebar para mejor contraste */
+}
+
+/* Asegurar que el contenedor del sidebar tenga suficiente espacio para los globos */
+.sidebar {
+    min-width: 4.5rem;
+}
+
+/* Hacer el círculo perfectamente redondo */
+.notification-bubble-sidebar {
+    border-radius: 50%;
+}
+
+/* Ajustar tamaño y posición para que sea un círculo perfecto */
+.notification-bubble-sidebar {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+}
